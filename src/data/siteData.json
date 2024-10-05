@@ -1,0 +1,8 @@
+{
+  "title": "Site Init Template",
+  "description": "This is the init template for a site",
+  "image": {
+    "src": "https://master--astro-init.netlify.app/og.png",
+    "alt": "This is the OG image for my site"
+  }
+}

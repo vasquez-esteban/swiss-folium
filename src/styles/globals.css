@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Josefin";
+    src: url("/fonts/JosefinSans/JosefinSans-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  :root {
+    --background: rgb(0, 0, 0);
+    --primary-foreground: rgb(255, 255, 255);
+    --secondary-foreground: rgb(215, 215, 215);
+    --muted-foreground: rgb(117, 117, 117);
+
+    --accent: rgb(0, 102, 204);
+    --accent-foreground: rgb(57, 57, 57);
+  }
+
+  @layer base {
+    * {
+      box-sizing: border-box;
+      transition: background-color 0.3s ease;
+    }
+  
+  }
+}
