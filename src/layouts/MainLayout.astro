@@ -11,9 +11,68 @@ const { ...props } = Astro.props;
   <MainHead {...props} />
   <body class="bg-primary">
     <main>
+      <div class="custom-cursor" id="custom-cursor"></div>
       <Navbar />
       <slot />
       <Footer />
     </main>
-  </body>
+  </body><style>
+    html.lenis,
+    html.lenis body {
+      height: auto;
+    }
+
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+
+    .lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+
+    .lenis.lenis-smooth iframe {
+      pointer-events: none;
+    }
+
+    body {
+      cursor: none; /* Hide the default cursor */
+    }
+
+    .custom-cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      background-color: rgb(30, 22, 22);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1000;
+      transform: translate(-50%, -50%);
+      mix-blend-mode: difference;
+    }
+  </style>
+  <script src="../utils/lenis"></script>
+  <script>
+    import gsap from "gsap";
+
+    const initCursor = () => {
+      const cursor = document.getElementById("custom-cursor");
+      document.addEventListener("mousemove", (e) => {
+        if (cursor) {
+          gsap.to(cursor, {
+            top: e.clientY,
+            left: e.clientX,
+            ease: "back.out",
+          });
+        }
+      });
+    };
+
+    document.addEventListener("astro:page-load", initCursor);
+  </script>
 </html>

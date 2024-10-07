@@ -15,34 +15,25 @@ const currentPath = pathname.slice(1);
       <!-- Nav Links -->
       <ul>
         <li class="flex gap-[10vw]">
-          <a class={currentPath === "" ? "font-bold text-accent" : ""} href="/"
-            >home</a
+          <a
+            class={currentPath === ""
+              ? "font-bold text-accent"
+              : "hover:underline"}
+            href="/">home</a
           >
           <a
-            class={currentPath === "works" ? "font-bold text-accent" : ""}
+            class={currentPath === "works"
+              ? "font-bold text-accent"
+              : "hover:underline"}
             href="/works">works</a
           >
-          <a href="https://www.github.com/vasquez-esteban" target="_blank"
-            >github</a
+          <a
+            href="https://www.github.com/vasquez-esteban"
+            target="_blank"
+            class="hover:underline">github</a
           >
         </li>
       </ul>
     </div>
   </nav>
 </div>
-<!-- 
-  Use to highlight the active link in the navigation bar
-  Gotta test in dev and prod bc sometimes it doesn't work
----
-const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1); // remove the first "/"
----
-
-<nav>
-  <a class={currentPath === "" ? "active" : ""} href="/">Home</a>
-  <a class={currentPath === "portfolio" ? "active" : ""} href="/portfolio">Portfolio</a>
-  <a class={currentPath === "posts" ? "active" : ""} href="/posts">Article</a>
-  <a class={currentPath === "about" ? "active" : ""} href="/about">About Me</a>
-  <a class={currentPath === "contact" ? "active" : ""} href="/contact">Contact Me</a>
-</nav>
--->

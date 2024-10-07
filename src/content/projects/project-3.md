@@ -1,19 +1,36 @@
 ---
-title: "API HCE"
-description: "Proyecto académico en donde se desarrolla el backend de una Historia Clínica Electrónica"
+title: "Reaceiplas"
+description: "Development of a website for an eco-friendly company"
 image:
-  url: "../../assets/hce.png"
-  alt: "GitHub wallpaper"
+  url: "../../assets/rpla.webp"
+  alt: "Reaceiplas project thumbnail"
 worksImage1:
-  url: "../assets/hce2.png"
-  alt: "first image of your project."
+  url: "../assets/reaceiplas1.png"
+  alt: "Reaceiplas website screenshot 1"
 worksImage2:
-  url: "../assets/hce1.png"
-  alt: "second image of your project."
+  url: "../assets/reaceiplas2.png"
+  alt: "Reaceiplas website screenshot 2"
 platform: Web
-stack: Python, FastAPI
-website: ""
-github: https://github.com/vasquez-esteban/HCE
+stack: Webflow, JavaScript & Figma
+website: https://www.reaceiplas.com
+github: ""
 ---
 
-Este proyecto que utiliza FastAPI y SQLAlchemy para conectar una base de datos local con una API hecha en python. La api expone métodos GET y POST que permiten hacer una gestión fundamental de la información de pacientes, factores de riesgo y problemas clínicos. En el proyecto se trabajó con un médico, que fue asesorando en las mejores prácticas. En este proyecto se implementaron múltiples metodologías de desarrollo de software (Casos de uso, Modelo entidad-relación, Esquemas Pre-conceptuales, entre otros), además de técnicas de elicitación de requisitos en un entorno altamente práctico.
+## Project Overview
+
+Reaceiplas is an eco-friendly company that transforms plastic waste into plastic wood. Based on a Figma design created by my sister Karina Vásquez (a talented designer and content creator), I was responsible for developing the website, including SEO optimization, form implementation, and responsive design.
+
+## Key Responsibilities
+
+- Translated Figma designs into a fully functional website
+- Implemented responsive design for optimal viewing across devices
+- Integrated and optimized web forms
+- Conducted SEO optimization to improve site visibility
+
+## Learning Experience
+
+This project provided valuable experience working with Webflow, demonstrating its effectiveness for projects that prioritize design details over complex interactivity. It reinforced the importance of choosing the right tool for specific project requirements.
+
+## Conclusion
+
+The Reaceiplas website project showcases my ability to turn design concepts into functional, optimized web experiences while adapting to client-specific tools and requirements.

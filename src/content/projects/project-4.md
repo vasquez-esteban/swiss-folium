@@ -1,24 +1,48 @@
 ---
-title: "Portafolio"
-description: "Desarrollo de un sitio web tipo CMS para mostrar mi portafolio de proyectos"
+title: "Cosmic Cuties"
+description: "Development of a website to promote a Kickstarter campaign"
 image:
-  url: "../../assets/pf.png"
-  alt: "GitHub wallpaper"
+  url: "../../assets/im1.png"
+  alt: "Cosmic Cuties project thumbnail"
 worksImage1:
-  url: "../assets/image-2.webp"
-  alt: "first image of your project."
+  url: "../assets/cuties1.png"
+  alt: "Cosmic Cuties website screenshot 1"
 worksImage2:
-  url: "../assets/image-1.webp"
-  alt: "second image of your project."
+  url: "../assets/cuties2.png"
+  alt: "Cosmic Cuties website screenshot 2"
 platform: Web
-stack: Astro, JS, SASS.
-website: https://vasquez-esteban-portfolio.netlify.app
-github: "https://github.com/vasquez-esteban/portfolio"
+stack: Webflow, JavaScript
+website: https://www.cosmicuties.com
+github: ""
 ---
 
-Mi último proyecto personal se trató de desarrollar un sitio web para mostrar mis portafolio de proyectos tanto laborales como personales. En este proyecto se aplica todo lo aprendido hasta ahora: desarrollo de websites dinámicas y con gestión de muchos contenidos, optimización del SEO y manejo de un stack eficiente y moderno. En este proyecto se utilizó un tema de Astro que provee una organización básica del sitio, sin embargo, se hizo una gran reorganización del código, incluyendo:
+## Project Overview
 
-- Refactorización del CSS en módulos para evitar problemas de especificidad.
-- Optimización de imágenes usando el componente <Image> que provee astro.
-- Refactorización de los datos para hacer la estructura del código más concisa y accesible.
-- Uso de Javascript para la generación de HTML (al estilo React).
+Cosmic Cuties is a card game created by a company in New Zealand. For this project, I was tasked with developing a website to promote the company's Kickstarter campaign.
+
+## Key Responsibilities
+
+- Developed a visually appealing website to showcase the Kickstarter campaign
+- Collaborated closely with the design team to effectively present their 3D designs
+- Implemented attractive animations using HTML, CSS, and JavaScript
+- Optimized the website's SEO to increase visibility and reach
+
+## Challenges and Solutions
+
+Working with the design team's excellent 3D skills presented an exciting challenge. I focused on showcasing these designs effectively on the web by:
+
+1. Implementing smooth and engaging animations
+2. Ensuring optimal performance despite rich visual content
+3. Maintaining responsiveness across different devices
+
+## Learning Experience
+
+This project enhanced my skills in:
+
+- Translating complex 3D designs into web-friendly formats
+- Balancing visual appeal with performance optimization
+- Effective collaboration with specialized design teams
+
+## Conclusion
+
+The Cosmic Cuties website demonstrates my ability to create visually striking, performance-optimized web experiences that effectively promote products and campaigns.

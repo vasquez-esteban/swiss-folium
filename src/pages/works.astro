@@ -16,6 +16,7 @@ const allProjects = await getCollection("projects");
       >
         <div class="flex flex-col">
           <svg
+            id="rect-top-w"
             width="500"
             height="100"
             viewBox="0 0 740 132"
@@ -28,6 +29,7 @@ const allProjects = await getCollection("projects");
               fill="#E83D1F"></path>
           </svg>
           <svg
+            id="rect-btm-w"
             width="500"
             height="104"
             viewBox="0 0 741 125"
@@ -42,8 +44,10 @@ const allProjects = await getCollection("projects");
         </div>
       </div>
       <div class="absolute md:bottom-10 top-10">
-        <div class="md:text-[100px] text-[70px]">find <br /> your edge</div>
-        <div class="sm:mt-8 mt-16">
+        <div id="edge-w" class="md:text-[100px] text-[70px]">
+          find <br /> your edge
+        </div>
+        <div id="text-w" class="sm:mt-8 mt-16">
           Push your limits. Discover your strengths, even <br /> when it feels intimidating.
         </div>
       </div>
@@ -79,3 +83,25 @@ const allProjects = await getCollection("projects");
     </div>
   </Section>
 </MainLayout>
+<script>
+  import gsap from "gsap";
+
+  document.addEventListener("astro:after-swap", () => {
+    const timeline = gsap.timeline({ delay: 0.5 }); // Add a 1-second delay at the start
+
+    timeline
+      .fromTo(
+        "#rect-top-w",
+        { x: -100, opacity: 0 },
+        { x: 0, opacity: 1, duration: 1 }
+      )
+      .fromTo(
+        "#rect-btm-w",
+        { x: 250, opacity: 0 },
+        { x: 150, opacity: 1, duration: 1 },
+        "-=0.5"
+      ) // Start 0.5 seconds before the previous animation ends
+      .fromTo("#edge-w", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=0.5")
+      .fromTo("#text-w", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=0.5");
+  });
+</script>

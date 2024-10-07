@@ -1,12 +1,14 @@
 ---
 type Props = {
   color: string;
+  id?: string;
 };
 
-const { color } = Astro.props;
+const { color, id } = Astro.props;
 ---
 
 <section
+  id={id}
   class=`bg-${color} w-full h-auto flex justify-center pb-[50px] overflow-hidden`
 >
   <div class="w-[80%] max-w-[1366px] h-full relative">

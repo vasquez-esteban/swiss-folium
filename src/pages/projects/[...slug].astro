@@ -20,3 +20,65 @@ const { Content } = await entry.render();
 <WorkLayout frontmatter={entry.data}>
   <Content />
 </WorkLayout>
+<style is:inline>
+  .md-content h2 {
+    font-size: 1.8em;
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+    color: var(--accent);
+  }
+
+  .md-content h3 {
+    font-size: 1.5em;
+    margin-top: 1.2em;
+    margin-bottom: 0.6em;
+    color: var(--accent);
+  }
+
+  .md-content p {
+    margin-bottom: 1em;
+  }
+
+  .md-content ul,
+  .md-content ol {
+    margin-bottom: 1em;
+    padding-left: 2em;
+  }
+
+  .md-content li {
+    margin-bottom: 0.5em;
+  }
+
+  .md-content a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .md-content a:hover {
+    text-decoration: underline;
+  }
+
+  .md-content code {
+    background-color: var(--primary-background);
+    color: var(--secondary-background);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: monospace;
+  }
+
+  .md-content pre {
+    background-color: var(--primary-background);
+    color: var(--secondary-background);
+    padding: 1em;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-bottom: 1em;
+  }
+
+  .md-content blockquote {
+    border-left: 4px solid var(--accent);
+    padding-left: 1em;
+    margin-left: 0;
+    color: var(--primary-background);
+  }
+</style>

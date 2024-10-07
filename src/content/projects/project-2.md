@@ -1,19 +1,19 @@
 ---
-title: "Cosmic Cuties"
-description: "Desarrollo del sitio web para publicitar un Kickstarter"
+title: "Bog"
+description: "Desarrollo del sitio web de una hotelera"
 image:
-  url: "../../assets/im1.png"
+  url: "../../assets/rpla.webp"
   alt: "GitHub wallpaper"
 worksImage1:
-  url: "../assets/cuties1.png"
+  url: "../assets/reaceiplas1.png"
   alt: "first image of your project."
 worksImage2:
-  url: "../assets/cuties2.png"
+  url: "../assets/reaceiplas2.png"
   alt: "second image of your project."
 platform: Web
-stack: Webflow, JS
-website: https://www.cosmicuties.com
+stack: Webflow, JS & Figma
+website: https://www.reaceiplas.com
 github: ""
 ---
 
-Cosmic Cuties es un juego de cartas creado por una empresa en Nueva Zelanda. En este proyecto me encargué de desarrollar un sitio web que permitiera darle visibilidad al Kickstarter de la empresa. Me gustó mucho trabajar con el equipo de diseño ya que tenían excelentes habilidades en desarrollo de 3D, e intenté hacer lo mejor por mostrar esos diseños en la web, añadiendo animaciones atractivas a través de código de HTML, CSS y JS, además de optimizar el SEO del sitio.
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat

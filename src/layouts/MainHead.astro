@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import Seo from "../components/seo/Seo.astro";
 
 // Pass the contents to create SEO for the page
@@ -17,6 +18,8 @@ const { title, description, image, frontmatter, robots } = Astro.props;
 
   <title>{title}</title>
   <meta name="description" content={description} />
+
+  <ViewTransitions />
 
   <Seo
     title={title}
