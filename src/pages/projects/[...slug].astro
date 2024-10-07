@@ -4,13 +4,16 @@ import WorkLayout from "../../layouts/WorkLayout.astro";
 
 export async function getStaticPaths() {
   const projectEntries = await getCollection("projects");
-  return projectEntries.map((entry) => ({
+
+  return projectEntries.map((entry: { slug: any }) => ({
     params: { slug: entry.slug },
     props: { entry },
   }));
 }
 
-const { entry } = Astro.props;
+import type { CollectionEntry } from "astro:content";
+
+const { entry } = Astro.props as { entry: CollectionEntry<"projects"> };
 const { Content } = await entry.render();
 ---
 

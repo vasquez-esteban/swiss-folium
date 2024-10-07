@@ -57,14 +57,23 @@ const allProjects = await getCollection("projects");
         class="grid grid-cols-[repeat(auto-fit,minmax(24ch,1fr))] gap-4 p-0 box-border"
       >
         {
-          allProjects.map((card) => (
-            <Card
-              url={`/projects/${card.slug}/`}
-              imgPath={card.data.image.url}
-              title={card.data.title}
-              body={card.data.description}
-            />
-          ))
+          allProjects.map(
+            (card: {
+              slug: any;
+              data: {
+                image: { url: string };
+                title: string;
+                description: string;
+              };
+            }) => (
+              <Card
+                url={`/projects/${card.slug}/`}
+                imgPath={card.data.image.url}
+                title={card.data.title}
+                body={card.data.description}
+              />
+            )
+          )
         }
       </ul>
     </div>
