@@ -1,0 +1,15 @@
+---
+type Props = {
+  color: string;
+};
+
+const { color } = Astro.props;
+---
+
+<section
+  class=`bg-${color} w-full h-auto flex justify-center pb-[50px] overflow-hidden`
+>
+  <div class="w-[80%] max-w-[1366px] h-full relative">
+    <slot />
+  </div>
+</section>

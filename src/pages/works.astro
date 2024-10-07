@@ -1,0 +1,72 @@
+---
+import { getCollection } from "astro:content";
+
+import Card from "../components/ui/Card.astro";
+import Section from "../components/ui/Section.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+
+const allProjects = await getCollection("projects");
+---
+
+<MainLayout title="About" description="This is the about page">
+  <Section color="primary">
+    <div class="mt-[200px]">
+      <div
+        class="lg:rotate-[30deg] sm:items-center sm:ml-32 translate-x-1/4 2xl:translate-y-[63px]"
+      >
+        <div class="flex flex-col">
+          <svg
+            width="500"
+            height="100"
+            viewBox="0 0 740 132"
+            fill="none"
+            class=""
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.466164 66.1082C4.70599 29.8435 37.7416 0.44519 74.2533 0.44519L668.731 0.44519C712.913 0.44519 744.571 36.0201 739.441 79.904L733.377 131.771L58.8995 131.771C22.3878 131.771 -3.77366 102.373 0.466164 66.1082Z"
+              fill="#E83D1F"></path>
+          </svg>
+          <svg
+            width="500"
+            height="104"
+            viewBox="0 0 741 125"
+            fill="none"
+            class="translate-x-[150px]"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.11198 3.9928L685.716 0.685289C719.392 0.521398 743.653 27.5184 739.905 60.9848V60.9848C736.157 94.4512 705.82 121.714 672.145 121.878L72.5395 124.796C28.3572 125.011 -3.47351 89.5906 1.44347 45.6823L6.11198 3.9928Z"
+              fill="#E83D1F"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="absolute md:bottom-10 top-10">
+        <div class="md:text-[100px] text-[70px]">find <br /> your edge</div>
+        <div class="sm:mt-8 mt-16">
+          Push your limits. Discover your strengths, even <br /> when it feels intimidating.
+        </div>
+      </div>
+    </div>
+  </Section>
+  <Section color="primary">
+    <div class="mt-20">
+      <h2 class="font-josefin text-[45px] mb-10">WORKS</h2>
+      <ul
+        role="list"
+        class="grid grid-cols-[repeat(auto-fit,minmax(24ch,1fr))] gap-4 p-0 box-border"
+      >
+        {
+          allProjects.map((card) => (
+            <Card
+              url={`/projects/${card.slug}/`}
+              imgPath={card.data.image.url}
+              title={card.data.title}
+              body={card.data.description}
+            />
+          ))
+        }
+      </ul>
+    </div>
+  </Section>
+</MainLayout>

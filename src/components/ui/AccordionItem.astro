@@ -8,27 +8,26 @@ const { title, description } = Astro.props;
 ---
 
 <div
-  class="accordion__item group h-[60px] w-full overflow-hidden bg-slate-200 transition-all duration-500"
+  class="accordion__item group h-[60px] w-full overflow-hidden transition-all duration-400"
 >
   <button
-    class="accordion__toggle flex h-[60px] w-full cursor-pointer items-center justify-between"
+    class="accordion__toggle flex h-[60px] w-full cursor-pointer items-center justify-between border-b-2 border-secondary"
     id={`${title} accordion__item menu button`}
     aria-expanded="false"
     aria-controls={`${title} accordion__item menu content`}
   >
     {title}
+
     <svg
-      xmlns="http://www.w3.org/2000/svg"
       class="accordion__icon h-3 w-3 transition-transform duration-300"
-      aria-hidden="true"
-      width="24"
-      height="24"
-      viewBox="0 0 512 512"
-      ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-      <path
-        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-      ></path></svg
+      viewBox="0 0 23 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
     >
+      <path
+        d="M21.1024 1.54757C21.1287 0.995908 20.7027 0.527403 20.1511 0.501132L11.1613 0.0730241C10.6096 0.0467534 10.1411 0.472665 10.1148 1.02432C10.0886 1.57598 10.5145 2.04449 11.0661 2.07076L19.0571 2.4513L18.6765 10.4422C18.6503 10.9939 19.0762 11.4624 19.6278 11.4887C20.1795 11.515 20.648 11.089 20.6743 10.5374L21.1024 1.54757ZM4.27611 17.2399L20.7762 2.23994L19.4308 0.760059L2.93077 15.7601L4.27611 17.2399Z"
+        fill="black"></path>
+    </svg>
   </button>
   <div
     id={`${title} accordion__item menu content`}
@@ -43,7 +42,7 @@ const { title, description } = Astro.props;
 <script>
   function accordionSetup() {
     const accordionItems = document.querySelectorAll(
-      ".accordion__item",
+      ".accordion__item"
       // eslint-disable-next-line
     ) as NodeListOf<HTMLElement>;
 
@@ -52,7 +51,7 @@ const { title, description } = Astro.props;
       const accordionIcon = accordionItem.querySelector(".accordion__icon");
 
       if (accordionToggle && accordionIcon) {
-        accordionToggle.addEventListener("click", (e) => {
+        accordionToggle.addEventListener("mouseover", (e) => {
           e.stopPropagation(); // prevent the event from bubbling up to the document
 
           // Close other accordion items
@@ -100,7 +99,7 @@ const { title, description } = Astro.props;
     });
 
     // Close the accordion when clicking outside of it
-    document.addEventListener("click", (event) => {
+    document.addEventListener("mouseover", (event) => {
       accordionItems.forEach((accordionItem) => {
         const accordionToggle =
           accordionItem.querySelector(".accordion__toggle");

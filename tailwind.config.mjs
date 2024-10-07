@@ -4,20 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        "primary-foreground": "var(--primary-foreground)",
-        "secondary-foreground": "var(--secondary-foreground)",
-        "muted-foreground": "var(--muted-foreground)",
+        primary: "var(--primary-background)",
+        secondary: "var(--secondary-background)",
         accent: "var(--accent)",
-        "accent-foreground": "var(--accent-foreground)",
-        destructive: "var(--destructive)",
-        "destructive-foreground": "var(--destructive-foreground)",
-        border: "var(--border)",
-        input: "var(--input)",
-        ring: "var(--ring)",
       },
-      borderRadius: {
-        DEFAULT: "var(--radius)",
+      fontFamily: {
+        grotesk: ["Grotesk", "serif"],
+        josefin: ["Josefin", "sans-serif"],
       },
     },
   },

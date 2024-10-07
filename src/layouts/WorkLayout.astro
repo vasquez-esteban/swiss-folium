@@ -1,0 +1,116 @@
+---
+import type { ImageMetadata } from "astro";
+
+import { Image } from "astro:assets";
+import Section from "../components/ui/Section.astro";
+import MainLayout from "./MainLayout.astro";
+
+const { frontmatter } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "../assets/*.{jpeg,jpg,png,gif,webp}"
+);
+
+if (!images[frontmatter.worksImage1.url])
+  throw new Error(
+    `"${frontmatter.worksImage1.url}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`
+  );
+
+if (!images[frontmatter.worksImage2.url])
+  throw new Error(
+    `"${frontmatter.worksImage2.url}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`
+  );
+---
+
+<MainLayout>
+  <Section color="primary">
+    <div class="mt-[200px]">
+      <div class="sm:items-center sm:ml-32">
+        <div class="flex flex-col items-center">
+          <svg
+            width="500"
+            height="100"
+            viewBox="0 0 740 132"
+            fill="none"
+            class=""
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.466164 66.1082C4.70599 29.8435 37.7416 0.44519 74.2533 0.44519L668.731 0.44519C712.913 0.44519 744.571 36.0201 739.441 79.904L733.377 131.771L58.8995 131.771C22.3878 131.771 -3.77366 102.373 0.466164 66.1082Z"
+              fill="#E83D1F"></path>
+          </svg>
+          <svg
+            width="500"
+            height="104"
+            viewBox="0 0 741 125"
+            fill="none"
+            class="translate-x-[150px]"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.11198 3.9928L685.716 0.685289C719.392 0.521398 743.653 27.5184 739.905 60.9848V60.9848C736.157 94.4512 705.82 121.714 672.145 121.878L72.5395 124.796C28.3572 125.011 -3.47351 89.5906 1.44347 45.6823L6.11198 3.9928Z"
+              fill="#E83D1F"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="absolute md:bottom-10 top-10">
+        <div class="md:text-[100px] text-[70px]">
+          {frontmatter.title}
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <section class="bg-secondary text-primary flex justify-center">
+    <div class="w-[80%] max-w-[1366px] py-20">
+      <slot />
+      <ul class="list-none p-0 text-indent-4 mt-8">
+        <li class="mt-5">
+          <span class="rounded text-xs mr-2 text-secondary bg-accent py-2 px-1"
+            >PLATFORM</span
+          >{frontmatter.platform}
+        </li>
+        <li class="mt-5">
+          <span class="rounded text-xs mr-8 text-secondary bg-accent py-2 px-1"
+            >STACK</span
+          >{frontmatter.stack}
+        </li>
+        <li class="mt-5">
+          {
+            frontmatter.website === "" ? (
+              ""
+            ) : (
+              <>
+                <span class="rounded text-xs mr-4 text-secondary bg-accent py-2 px-1">
+                  WEBSITE
+                </span>
+                <a
+                  class="text-inherit hover:underline"
+                  href={frontmatter.website}
+                  target="_blank"
+                >
+                  {frontmatter.title}
+                </a>
+              </>
+            )
+          }
+        </li>
+      </ul>
+      <div class="flex flex-col items-center gap-10 mt-12">
+        <Image
+          class="rounded-xl grayscale hover:grayscale-0"
+          width="500"
+          height="281"
+          src={images[frontmatter.worksImage1.url]()}
+          alt={frontmatter.worksImage1.alt}
+        />
+        <Image
+          class="rounded-xl grayscale hover:grayscale-0"
+          width="500"
+          height="281"
+          src={images[frontmatter.worksImage2.url]()}
+          alt={frontmatter.worksImage2.alt}
+        />
+      </div>
+    </div>
+  </section>
+</MainLayout>

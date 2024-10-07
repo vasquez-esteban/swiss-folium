@@ -1,139 +1,35 @@
 ---
-import { Image } from "astro:assets";
-
-const navLinks = [
-  {
-    name: "Home",
-    href: "#",
-  },
-  {
-    name: "Service",
-    href: "/about",
-  },
-  {
-    name: "Feature",
-    href: "#",
-  },
-  {
-    name: "Product",
-    href: "#",
-  },
-  {
-    name: "Testimonial",
-    href: "#",
-  },
-  {
-    name: "FAQ",
-    href: "#",
-  },
-];
-
-import bars from "../../assets/bars.svg";
-import brand from "../../assets/brand.svg";
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
 ---
 
-<div class="sticky top-0 z-10 flex h-32 justify-center bg-slate-400">
+<div class="bg-primary sticky top-0 z-10 flex h-[74px] justify-center">
   <nav
     aria-label="Main Navigation"
     role="navigation"
     class="flex h-full w-full items-center justify-between"
     style="max-width: 1300px;"
   >
-    <!-- Brand -->
-    <div class="pl-4 lg:flex-none">
-      <a href="/">
-        <Image src={brand} alt="Brand Logo" class="w-5" />
-      </a>
-    </div>
-
     <!-- Nav Menu -->
-    <div
-      id="navmenu"
-      class="transition-height absolute top-full z-10 h-0 w-full overflow-hidden bg-slate-400 duration-500 lg:static lg:flex lg:h-auto lg:flex-grow lg:items-center lg:justify-between lg:pr-4"
-    >
+    <div id="navmenu" class="w-full flex items-center justify-center">
       <!-- Nav Links -->
-      <ul class="lg:flex lg:flex-grow lg:justify-center lg:gap-14">
-        {
-          navLinks.map((link) => {
-            return (
-              <li class="mx-4 p-4 px-0 lg:mx-0">
-                <a href={link.href} class="block">
-                  {link.name}
-                </a>
-              </li>
-            );
-          })
-        }
+      <ul>
+        <li class="flex gap-[10vw]">
+          <a class={currentPath === "" ? "font-bold text-accent" : ""} href="/"
+            >home</a
+          >
+          <a
+            class={currentPath === "works" ? "font-bold text-accent" : ""}
+            href="/works">works</a
+          >
+          <a href="https://www.github.com/vasquez-esteban" target="_blank"
+            >github</a
+          >
+        </li>
       </ul>
-
-      <!-- Login -->
-      <div class="flex flex-col lg:flex-row lg:items-center lg:gap-4">
-        <a class="m-4 lg:m-0" href="#login">Login</a>
-        <button
-          class="m-4 mb-4 w-24 rounded-md bg-slate-300 px-4 py-2 lg:m-0 lg:mb-0"
-          >Sign up</button
-        >
-      </div>
     </div>
-
-    <!-- Hamburger menu -->
-    <button
-      aria-label="menu"
-      aria-controls="navmenu"
-      aria-expanded="false"
-      id="menuButton"
-      class="w-10 cursor-pointer pr-4 lg:hidden"
-    >
-      <Image src={bars} alt="hamburgerIcon" class="hamburgerIcon" />
-    </button>
   </nav>
 </div>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    /* Make the script safe to run only when everything loads */
-    const menuButton = document.getElementById("menuButton");
-    const navMenu = document.getElementById("navmenu");
-
-    let isMenuOpen = false;
-
-    if (menuButton && navMenu) {
-      menuButton.addEventListener("click", () => {
-        /* Handle the height transition */
-        isMenuOpen = !isMenuOpen;
-
-        menuButton.setAttribute("aria-expanded", `${isMenuOpen}`);
-
-        if (isMenuOpen) {
-          navMenu.style.height = `${navMenu.scrollHeight}px`;
-        } else {
-          navMenu.style.height = "0px";
-        }
-      });
-
-      navMenu.addEventListener("click", () => {
-        /* Close menu after using it */
-        if (isMenuOpen) {
-          isMenuOpen = false;
-          navMenu.style.height = "0px";
-          navMenu.classList.remove("h-auto");
-        }
-      });
-
-      window.addEventListener("resize", () => {
-        /* Resize cleanup screen state*/
-        if (window.innerWidth >= 1024) {
-          /* Add height if menu was closed and then resize happened */
-          navMenu.style.height = "auto";
-          navMenu.classList.remove("h-0");
-        } else {
-          /* Prevent opened menu when going from bit to small */
-          navMenu.style.height = "0px";
-        }
-      });
-    }
-  });
-</script>
-
 <!-- 
   Use to highlight the active link in the navigation bar
   Gotta test in dev and prod bc sometimes it doesn't work

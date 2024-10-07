@@ -1,15 +1,207 @@
 ---
-import Accordion from "../components/ui/Accordion.astro";
-import SwiperSlider from "../components/ui/SwiperSlider.astro";
+import { Image } from "astro:assets";
+import Section from "../components/ui/Section.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import "../styles/globals.css";
+
+import ArrowBig from "../assets/arrow-big.svg";
+import Star from "../assets/star.svg";
+import Accordion from "../components/ui/Accordion.astro";
+
+import skills from "../data/skills.json";
 ---
 
 <MainLayout title="Home" description="This is the home page">
-  <div class="p-10">
-    <Accordion />
-  </div>
-  <div class="p-10">
-    <SwiperSlider />
-  </div>
+  <Section color="primary">
+    <div class="mt-32">
+      <div class="lg:-rotate-[30deg] sm:items-center sm:ml-32">
+        <div class="flex flex-col items-center">
+          <h1 class="md:text-[100px] text-[60px] leading-[4rem]">
+            this is me <br />
+            <span class="md:text-[45px] text-[35px]">esteban vasquez</span>
+          </h1>
+        </div>
+        <div class="flex flex-col items-center">
+          <svg
+            width="740"
+            height="132"
+            class="mb-2"
+            viewBox="0 0 740 132"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.466164 66.1082C4.70599 29.8435 37.7416 0.44519 74.2533 0.44519L668.731 0.44519C712.913 0.44519 744.571 36.0201 739.441 79.904L733.377 131.771L58.8995 131.771C22.3878 131.771 -3.77366 102.373 0.466164 66.1082Z"
+              fill="#E83D1F"></path>
+          </svg>
+          <svg
+            width="741"
+            height="125"
+            viewBox="0 0 741 125"
+            fill="none"
+            class="translate-x-[150px]"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.11198 3.9928L685.716 0.685289C719.392 0.521398 743.653 27.5184 739.905 60.9848V60.9848C736.157 94.4512 705.82 121.714 672.145 121.878L72.5395 124.796C28.3572 125.011 -3.47351 89.5906 1.44347 45.6823L6.11198 3.9928Z"
+              fill="#E83D1F"></path>
+          </svg>
+        </div>
+
+        <div
+          class="hidden sm:flex justify-center lg:translate-x-[300px] lg:-rotate-180"
+        >
+          <div class="md:text-[45px] text-[35px]">
+            grid system <br />
+            <span class="text-accent md:text-[45px] text-[35px]">none</span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="md:text-[45px] text-[35px] absolute bottom-12 hidden sm:block"
+      >
+        find <br /> your <br /> edge
+      </div>
+    </div>
+  </Section>
+  <Section color="secondary">
+    <h2 class="text-primary mt-[80px] sm:mt-[160px] mb-6 font-bold">
+      ABOUT ME
+    </h2>
+    <div class="text-accent text-[35px] sm:text-[45px] xl:pr-[10%]">
+      I'm a <span class="text-[35px] sm:text-[45px] text-primary"
+        >creative developer</span
+      > focused on crafting experiences that leave a strong visual impact.
+    </div>
+    <div class="flex justify-end max-w-[1200px]">
+      <Image src={Star} alt="Decorative Star" class="-mt-1" />
+    </div>
+  </Section>
+  <Section color="accent">
+    <div class="sm:pb-20">
+      <h2 class="text-secondary mt-[80px] sm:mt-[160px] mb-6 font-bold">
+        LAST PROJECTS
+      </h2>
+      <div class="flex gap-4 justify-between">
+        <div class="flex justify-start">
+          <div
+            class="hidden sm:flex text-primary font-bold -rotate-90 items-center"
+          >
+            CHRONICLES OF CHAOS
+          </div>
+          <div class="hidden sm:flex items-end w-auto">
+            <Image src={ArrowBig} alt="Decorative Arrow" />
+          </div>
+        </div>
+
+        <a
+          class="flex justify-end items-end sm:w-3/4 flex-col h-[200px]"
+          href="/works"
+        >
+          <Accordion />
+        </a>
+      </div>
+    </div>
+  </Section>
+  <Section color="primary">
+    <div class="sm:pb-20 sm:pr-32">
+      <div class="flex justify-end">
+        <svg
+          width="305"
+          height="187"
+          viewBox="0 0 305 187"
+          fill="none"
+          class="mt-10 -mb-10 w-[200px] sm:w-auto"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M127.204 77.2082L79.5 0L0.258667 128.25H130.998C139.683 150.367 157.343 169.234 181.484 179.152C227.461 198.042 279.535 177.325 297.795 132.88C316.056 88.4354 293.588 37.0925 247.611 18.2028C201.635 -0.686886 149.561 20.0298 131.3 64.4747C129.577 68.6688 128.217 72.9243 127.204 77.2082ZM135.235 90.2052L127.204 77.2082C123.122 94.4838 124.703 112.221 130.998 128.25H141.847C149.985 146.288 165.024 161.578 185.285 169.903C226.45 186.816 272.504 168.124 288.546 129.08C304.587 90.0364 284.977 44.3657 243.811 27.4525C202.645 10.5393 156.591 29.2314 140.55 68.275C137.608 75.435 135.866 82.8178 135.235 90.2052ZM135.235 90.2052L158.741 128.25H141.847C136.483 116.359 134.119 103.275 135.235 90.2052Z"
+            fill="black"></path>
+          <path d="M60.5 55H100.014V178H60.5L60.5 55Z" fill="#E83D1F"></path>
+        </svg>
+      </div>
+      <h2 class="text-secondary mt-[40px] mb-6 font-bold">INTERESTS</h2>
+      <div class="text-secondary text-[35px] sm:text-[45px]">
+        I thrive on collaborating with people who bring different perspectives.
+        I live for <span class="text-accent text-[35px] sm:text-[45px]"
+          >novelty</span
+        > and embrace new challenges.
+      </div>
+    </div>
+  </Section>
+  <Section color="accent">
+    <div class="pb-40 sm:pr-32 relative">
+      <h2 class="text-secondary mt-[80px] sm:mt-[160px] mb-6 font-bold">
+        WHAT I DO
+      </h2>
+      <div class="text-secondary text-[35px] sm:text-[45px]">
+        I use Webflow and JavaScript frameworks to transform designs into fully
+        deployed websites. I aim to create <span
+          class="text-primary text-[35px] sm:text-[45px]"
+          >memorable user experiences</span
+        >
+        with animations and smart interactions.
+      </div>
+      <div class="absolute -bottom-10 right-0">
+        <svg
+          width="728"
+          height="139"
+          viewBox="0 0 728 141"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M729 0L0 148H729V0Z" fill="#171616"></path>
+        </svg>
+      </div>
+      <div
+        class="w-20 h-20 rounded-full absolute bottom-[80px] right-0 bg-primary"
+      >
+      </div>
+    </div>
+  </Section>
+  <Section color="primary">
+    <div class="pb-20 sm:pr-24">
+      <h2 class="text-secondary mt-[80px] sm:mt-[160px] mb-6 font-bold">
+        SKILLS
+      </h2>
+      <div class="text-secondary text-[35px] sm:text-[45px]">
+        Mastering no-code has deepened my grasp of <span
+          class="text-accent text-[35px] sm:text-[45px]">structure</span
+        >, helping me adopt better practices when transitioning to full code.
+      </div>
+
+      <div class="mt-10 flex flex-wrap justify-center sm:pl-24">
+        {
+          skills.map((skill) => (
+            <Image
+              class="mx-2 my-1 grayscale hover:grayscale-0 transition-all duration-200"
+              width="46"
+              height="46"
+              alt={skill.name}
+              src={skill.icon}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </Section>
+  <Section color="secondary">
+    <div class="pb-28 sm:pb-32">
+      <h2 class="text-primary mt-[80px] sm:mt-[160px] mb-6 font-bold">
+        EXPERIENCE
+      </h2>
+      <div class="text-primary text-[35px] sm:text-[45px] sm:pr-20">
+        I’m proud to have collaborated on projects with diverse clients. This
+        past year has brought fantastic opportunities for learning and growth. <br
+        />
+        Want to know more?
+      </div>
+      <div class="absolute bottom-[89px] right-20">
+        <a href="/works" class="bg-accent px-4 py-2 rounded-2xl cursor-pointer"
+          >Projects</a
+        >
+      </div>
+    </div>
+  </Section>
 </MainLayout>
