@@ -2,7 +2,7 @@
 title: "Portfolio"
 description: "Development of a CMS-type website to showcase my project portfolio"
 image:
-  url: "../../assets/pf.png"
+  url: "../../assets/pf.webp"
   alt: "Portfolio project thumbnail"
 worksImage1:
   url: "../assets/image-2.webp"

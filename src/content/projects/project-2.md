@@ -1,19 +1,36 @@
 ---
-title: "Bog"
-description: "Desarrollo del sitio web de una hotelera"
+title: "Bog Urban Hotel"
+description: "Recreating a website to improve branding"
 image:
   url: "../../assets/rpla.webp"
   alt: "GitHub wallpaper"
 worksImage1:
   url: "../assets/reaceiplas1.png"
-  alt: "first image of your project."
+  alt: "Bog Urban Hotel Banner."
 worksImage2:
   url: "../assets/reaceiplas2.png"
-  alt: "second image of your project."
+  alt: "."
 platform: Web
 stack: Webflow, JS & Figma
 website: https://www.reaceiplas.com
 github: ""
 ---
 
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat
+## Project Overview
+
+Bog Urban Hotel is an executive hotel in Bogotá that needed a rework on their main website. Based on a Figma design created by my sister Karina Vásquez (a talented designer and content creator), I was responsible for developing the website, including SEO optimization, form implementation, and responsive design.
+
+## Key Responsibilities
+
+- Translated Figma designs into a fully functional website
+- Implemented responsive design for optimal viewing across devices
+- Integrated and optimized web forms
+- Conducted SEO optimization to improve site visibility
+
+## Learning Experience
+
+This project offered valuable experience working on a hotel website using Webflow, showcasing its strengths for design-focused projects. It highlighted the importance of selecting the right platform to balance aesthetics and functionality, particularly in industries where visual appeal plays a crucial role.
+
+## Conclusion
+
+The Bog Urban Hotel website project demonstrates my ability to transform design visions into functional, visually optimized web experiences while adapting to specific client tools and requirements.

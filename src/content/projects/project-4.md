@@ -2,13 +2,13 @@
 title: "Cosmic Cuties"
 description: "Development of a website to promote a Kickstarter campaign"
 image:
-  url: "../../assets/im1.png"
+  url: "../../assets/im1.webp"
   alt: "Cosmic Cuties project thumbnail"
 worksImage1:
-  url: "../assets/cuties1.png"
+  url: "../assets/cuties1.webp"
   alt: "Cosmic Cuties website screenshot 1"
 worksImage2:
-  url: "../assets/cuties2.png"
+  url: "../assets/cuties2.webp"
   alt: "Cosmic Cuties website screenshot 2"
 platform: Web
 stack: Webflow, JavaScript

@@ -2,13 +2,13 @@
 title: "Kreatif"
 description: "Development of a high-performance landing page"
 image:
-  url: "../../assets/kr2.png"
+  url: "../../assets/kr2.webp"
   alt: "Kreatif project thumbnail"
 worksImage1:
-  url: "../assets/kr1.png"
+  url: "../assets/kr1.webp"
   alt: "Kreatif website screenshot 1"
 worksImage2:
-  url: "../assets/kr3.png"
+  url: "../assets/kr3.webp"
   alt: "Kreatif website screenshot 2"
 platform: Web
 stack: Astro.js, Tailwind

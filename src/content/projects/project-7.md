@@ -2,13 +2,13 @@
 title: "API HCE"
 description: "Academic project developing the backend for an Electronic Health Record system"
 image:
-  url: "../../assets/hce.png"
+  url: "../../assets/hce.webp"
   alt: "API HCE project thumbnail"
 worksImage1:
-  url: "../assets/hce2.png"
+  url: "../assets/hce2.webp"
   alt: "API HCE screenshot 1"
 worksImage2:
-  url: "../assets/hce1.png"
+  url: "../assets/hce1.webp"
   alt: "API HCE screenshot 2"
 platform: Web
 stack: Python, FastAPI

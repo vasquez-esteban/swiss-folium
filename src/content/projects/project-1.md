@@ -2,17 +2,17 @@
 title: "Somos The Group"
 description: "Development of a website for a major hotel company"
 image:
-  url: "../../assets/stg1.png"
+  url: "../../assets/stg1.webp"
   alt: "Somos The Group project thumbnail"
 worksImage1:
-  url: "../assets/stg2.png"
+  url: "../assets/stg2.webp"
   alt: "Somos website screenshot 1"
 worksImage2:
-  url: "../assets/stg3.png"
+  url: "../assets/stg3.webp"
   alt: "Somos website screenshot 2"
 platform: Web
 stack: Webflow, GSAP, jQuery, Figma
-website: "www.stg"
+website: "https://thesomos.com"
 github: ""
 ---
 
@@ -41,7 +41,7 @@ Working on the Somos The Group website enhanced my skills in:
 
 ## Further Details
 
-For a more in-depth look at my experience and the challenges we faced during this project, please visit my blog post: [Link](https://medium.com)
+For a more in-depth look at my experience and the challenges we faced during this project, please visit my blog post: [Link](https://medium.com/@woi.koiso/collaboration-code-and-client-curveballs-crafting-a-5-star-hotel-web-experience-125454bf4d50)
 
 ## Conclusion
 

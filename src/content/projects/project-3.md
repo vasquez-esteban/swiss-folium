@@ -5,10 +5,10 @@ image:
   url: "../../assets/rpla.webp"
   alt: "Reaceiplas project thumbnail"
 worksImage1:
-  url: "../assets/reaceiplas1.png"
+  url: "../assets/reaceiplas1.webp"
   alt: "Reaceiplas website screenshot 1"
 worksImage2:
-  url: "../assets/reaceiplas2.png"
+  url: "../assets/reaceiplas2.webp"
   alt: "Reaceiplas website screenshot 2"
 platform: Web
 stack: Webflow, JavaScript & Figma
