@@ -5,10 +5,10 @@ image:
   url: "../../assets/rpla.webp"
   alt: "GitHub wallpaper"
 worksImage1:
-  url: "../assets/reaceiplas1.png"
+  url: "../assets/reaceiplas1.webp"
   alt: "Bog Urban Hotel Banner."
 worksImage2:
-  url: "../assets/reaceiplas2.png"
+  url: "../assets/reaceiplas2.webp"
   alt: "."
 platform: Web
 stack: Webflow, JS & Figma
