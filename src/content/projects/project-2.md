@@ -2,17 +2,17 @@
 title: "Bog Urban Hotel"
 description: "Recreating a website to improve branding"
 image:
-  url: "../../assets/rpla.webp"
+  url: "../../assets/bog1.webp"
   alt: "GitHub wallpaper"
 worksImage1:
-  url: "../assets/reaceiplas1.webp"
+  url: "../assets/bog2.webp"
   alt: "Bog Urban Hotel Banner."
 worksImage2:
-  url: "../assets/reaceiplas2.webp"
+  url: "../assets/bog3.webp"
   alt: "."
 platform: Web
 stack: Webflow, JS & Figma
-website: https://www.reaceiplas.com
+website: https://www.bogurbanhotel.com
 github: ""
 ---
 
@@ -23,6 +23,7 @@ Bog Urban Hotel is an executive hotel in Bogotá that needed a rework on their m
 ## Key Responsibilities
 
 - Translated Figma designs into a fully functional website
+- Implemented English and Spanish versions through routing
 - Implemented responsive design for optimal viewing across devices
 - Integrated and optimized web forms
 - Conducted SEO optimization to improve site visibility
